@@ -1,0 +1,17 @@
+        <Button
+          className="float-end bg-danger mx-2"
+          onClick={(e) => handleActivityDelete(e, activity.id)}
+          name={activity.id}
+        >
+          {/* onClick={() => deleteActivity(activity.id)} */}
+          {deleteSubmitting && activity.id === target && (
+            <Spinner
+              as="span"
+              animation="border"
+              size="sm"
+              role="status"
+              aria-hidden="true"
+            />
+          )}{" "}
+          <span>Delete</span>
+        </Button>
