@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Persistance
 {
-    public class MyContext : DbContext
+    public class MyContext : IdentityDbContext<AppUser>
     {
         public virtual DbSet<Activity> Activities { get; set; }
 
